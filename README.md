@@ -25,3 +25,5 @@ Optional:
 4. User select "reply" from detail view to respond to a tweet
 
 5. User can delete tweet from detail view.
+
+![video walkthrough](simpletwitterapp.gif)
