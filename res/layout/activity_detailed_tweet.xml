@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.codepath.apps.simpletwitter.DetailedTweetActivity" >
+
+    <ImageView
+        android:id="@+id/dvImgView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/dvUsrName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dvImgView"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/dvImgView"
+        android:text="foo"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/dvScreenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dvImgView"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/dvImgView"
+        android:text="foo"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/dvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dvImgView"
+        android:layout_marginTop="10dp"
+        android:text="msg"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/dvActionBarLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/dvBody"
+        android:layout_below="@+id/dvBody"
+        android:layout_marginTop="29dp" >
+
+        <Button
+            android:id="@+id/dvReplyB"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reply" />
+
+        <Button
+            android:id="@+id/dvDeleteB"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dvReplyLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/dvActionBarLinearLayout"
+        android:layout_below="@+id/dvActionBarLinearLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue" >
+
+        <EditText
+            android:id="@+id/dvReplyTextView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:maxLength="140"
+            android:lines="4"
+            android:scrollbars="vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall" >
+
+            <requestFocus />
+        </EditText>
+        <!-- 
+        android:layout_weight="1"
+         -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dvCreatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dvUsrName"
+        android:layout_alignBottom="@+id/dvUsrName"
+        android:layout_alignParentRight="true"
+        android:text="Time" />
+
+</RelativeLayout>
